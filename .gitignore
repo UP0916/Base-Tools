@@ -1,0 +1,6 @@
+# 文件
+/Base64-Tools.spec
+
+# 文件夹
+/bin/
+__pycache__/
