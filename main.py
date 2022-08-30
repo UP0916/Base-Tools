@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 
 
 class Main(QMainWindow, GUI.Ui_MainWindow):
-    character = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    character = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
 
     def __init__(self):
         super().__init__()
@@ -30,7 +30,7 @@ class Main(QMainWindow, GUI.Ui_MainWindow):
         
         if all(i in self.character for i in data):
             return True
-        QMessageBox.information(self, "温馨提示", "您输入的内容只能是0或者1!", QMessageBox.Yes)
+        QMessageBox.information(self, "温馨提示", "您输入的内容不符合Base64编码!", QMessageBox.Yes)
 
     def Base64str_to_List(self, base64_str):
         return base64_str.splitlines()
