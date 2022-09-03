@@ -11,7 +11,6 @@ class Main(QMainWindow, GUI.Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
 
-        QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) # 设置支持高分辨率屏幕自适应
         self.setWindowIcon(QtGui.QIcon("./images/Logo.ico")) # 设置软件图标
         self.setFixedSize(self.width(), self.height()) # 禁止窗口最大化
 
@@ -80,6 +79,7 @@ class Main(QMainWindow, GUI.Ui_MainWindow):
 
 
 if __name__ == "__main__":
+    QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) # DPI自适应
     app = QApplication(sys.argv)
     ui = Main()
     ui.show()
