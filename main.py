@@ -1,17 +1,17 @@
 import sys
-import base64
 from src import GUI
-from PyQt5 import QtGui
+from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 
 
 class Main(QMainWindow, GUI.Ui_MainWindow):
     character = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
-
+    
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
+        QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) # 设置支持高分辨率屏幕自适应
         self.setWindowIcon(QtGui.QIcon("./images/Logo.ico")) # 设置软件图标
         self.setFixedSize(self.width(), self.height()) # 禁止窗口最大化
 
