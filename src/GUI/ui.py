@@ -106,4 +106,4 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "Base64补全:"))
         self.label_8.setText(_translate("MainWindow", "Base64隐写(二进制):"))
         self.label_9.setText(_translate("MainWindow", "Base64隐写(二进制转ASCII):"))
-from myqplantextedit import MyQPlanTextEdit
+from src.GUI.myqplantextedit import MyQPlanTextEdit
