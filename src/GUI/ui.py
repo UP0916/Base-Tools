@@ -101,9 +101,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Base64工具   作者:Byxs20"))
-        self.plainTextEdit.setPlaceholderText(_translate("MainWindow", "输入二进制字符串。"))
+        self.plainTextEdit.setPlaceholderText(_translate("MainWindow", "输入多行Base64字符串。"))
         self.pushButton.setText(_translate("MainWindow", "解码"))
         self.label_7.setText(_translate("MainWindow", "Base64补全:"))
         self.label_8.setText(_translate("MainWindow", "Base64隐写(二进制):"))
         self.label_9.setText(_translate("MainWindow", "Base64隐写(二进制转ASCII):"))
-from src.GUI.myqplantextedit import MyQPlanTextEdit
+from myqplantextedit import MyQPlanTextEdit

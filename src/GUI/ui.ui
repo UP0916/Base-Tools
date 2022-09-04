@@ -46,7 +46,7 @@
               </font>
              </property>
              <property name="placeholderText">
-              <string>输入二进制字符串。</string>
+              <string>输入多行Base64字符串。</string>
              </property>
             </widget>
            </item>
