@@ -79,7 +79,7 @@ class Main(QMainWindow, GUI.Ui_MainWindow):
 
 
 if __name__ == "__main__":
-    QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) # DPI自适应
+    # QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) # DPI自适应
     app = QApplication(sys.argv)
     ui = Main()
     ui.show()
