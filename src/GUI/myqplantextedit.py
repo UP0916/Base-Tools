@@ -17,7 +17,7 @@ class MyQPlanTextEdit(QtWidgets.QPlainTextEdit):
     def dropEvent(self, e: QtGui.QDropEvent) -> None:
         super().dropEvent(e)        
         if os.path.exists(self.strPathFile):
-            with open(self.strPathFile, 'r') as f:
+            with open(self.strPathFile, 'r', encoding="utf-8") as f:
                 self.setPlainText(f.read())
         else:
             QtWidgets.QMessageBox.critical(self, "温馨提示", "文件不存在!", QtWidgets.QMessageBox.Yes)
