@@ -21,6 +21,7 @@ class Main(QMainWindow, GUI.Ui_MainWindow):
 
         # 信号
         self.pushButton.clicked.connect(self.Decode)
+        self.pushButton_2.clicked.connect(self.Clear)
 
     def get_text(self):
         if (text := self.plainTextEdit.toPlainText()) != "":
@@ -56,6 +57,11 @@ class Main(QMainWindow, GUI.Ui_MainWindow):
                 self.workThread.end.connect(self.ShowInfo)
                 self.workThread.start()
 
+    def Clear(self):
+        self.plainTextEdit.clear()
+        self.plainTextEdit_2.clear()
+        self.plainTextEdit_3.clear()
+        self.plainTextEdit_4.clear()
 
 class WorkThread(QtCore.QThread):
     end = QtCore.pyqtSignal(str, str, str)

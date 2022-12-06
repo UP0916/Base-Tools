@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>635</width>
-    <height>620</height>
+    <height>615</height>
    </rect>
   </property>
   <property name="font">
@@ -37,7 +37,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
            <item>
             <widget class="MyQPlanTextEdit" name="plainTextEdit">
              <property name="font">
@@ -80,6 +80,10 @@
                </item>
               </layout>
              </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
               <widget class="QPushButton" name="pushButton">
                <property name="sizePolicy">
@@ -96,6 +100,25 @@
                </property>
                <property name="text">
                 <string>解码</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>130</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>清空</string>
                </property>
               </widget>
              </item>
