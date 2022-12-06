@@ -30,6 +30,7 @@ class MyQPlanTextEdit(QtWidgets.QPlainTextEdit):
                     if all(char in self.character for char in line):
                         self.insertPlainText(line.decode("utf-8"))
                     else:
+                        self.insertPlainText("".join(chr(char) for char in line if char in self.character))
                         QtWidgets.QMessageBox.warning(self, "温馨提示", f"当前文本的第{row + 1}行可能存在零宽字符, 可以使用Sublime Text检查文本, 目前已帮您强制读取!", QtWidgets.QMessageBox.Yes)
         else:
             QtWidgets.QMessageBox.critical(self, "温馨提示", "文件不存在!", QtWidgets.QMessageBox.Yes)
