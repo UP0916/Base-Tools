@@ -6,7 +6,7 @@ use_upx = False
 upx_path = r"D:\Byxs20\Downloads\Compressed\upx-3.96-win64" # 填入下载的upx目录
 
 # config
-app_name = "Base64-Tools"
+app_name = "Base-Tools"
 dist_path = "./bin/build"
 work_path = "./bin"
 ico_ptah = "./images/Logo.ico"
