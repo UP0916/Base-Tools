@@ -128,7 +128,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Base32,64工具   作者:Byxs20"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Base-Tools v1.0.3   作者:Byxs20"))
         self.plainTextEdit.setPlaceholderText(_translate("MainWindow", "输入多行Base32,64字符串。"))
         self.radioButton.setText(_translate("MainWindow", "Base32"))
         self.radioButton_3.setText(_translate("MainWindow", "Base32(Padding)"))
