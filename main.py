@@ -1,3 +1,4 @@
+import os
 import re
 import sys
 import base64
@@ -5,7 +6,7 @@ import binascii
 import contextlib
 from src import GUI
 from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog
 
 
 class Main(QMainWindow, GUI.Ui_MainWindow):
@@ -22,6 +23,12 @@ class Main(QMainWindow, GUI.Ui_MainWindow):
         # 信号
         self.pushButton.clicked.connect(self.Decode)
         self.pushButton_2.clicked.connect(self.Clear)
+        self.pushButton_3.clicked.connect(self.open_txt)
+
+    def open_txt(self):
+        filename = QFileDialog.getOpenFileNames(self, '选择文本', os.getcwd(), "Image Files(*.txt);;All Files(*)")
+        if filename[0] != []:
+            GUI.MyQPlanTextEdit.read_txt(self.plainTextEdit, filename[0][0])
 
     def get_text(self):
         if (text := self.plainTextEdit.toPlainText()) != "":
@@ -130,7 +137,7 @@ class WorkThread(QtCore.QThread):
         self.end.emit(base_Comple, bin_str, ascii_str)
 
 if __name__ == "__main__":
-    # QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) # DPI自适应
+    QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) # DPI自适应
     app = QApplication(sys.argv)
     ui = Main()
     ui.show()
