@@ -19,7 +19,7 @@
    <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>Base-Tools v1.0.3   作者:Byxs20</string>
+   <string>Base-Tools v1.0.4   作者:Byxs20</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
@@ -31,7 +31,7 @@
       <height>571</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
        <item>
@@ -85,6 +85,25 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
+              <widget class="QPushButton" name="pushButton_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>打开文本</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <widget class="QPushButton" name="pushButton">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -94,7 +113,7 @@
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>130</width>
+                 <width>80</width>
                  <height>40</height>
                 </size>
                </property>
@@ -113,7 +132,7 @@
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>130</width>
+                 <width>80</width>
                  <height>40</height>
                 </size>
                </property>
